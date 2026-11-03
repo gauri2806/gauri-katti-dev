@@ -5,12 +5,11 @@ import {
   Menu,
   X,
   Command,
-  Moon,
-  Sun,
 } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 import CommandPalette from "../../features/command-palette/CommandPalette";
+import ThemePicker from "../../features/theme/ThemePicker";
 import { useTheme } from "../../features/theme/useTheme";
 
 const navItems = [
@@ -24,7 +23,7 @@ function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCommandPaletteOpen, setIsCommandPaletteOpen] = useState(false);
 
-  const { isDark, toggleTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
@@ -106,20 +105,8 @@ function Navbar() {
               <Command size={17} strokeWidth={1.8} />
             </button>
 
-            {/* Theme Toggle */}
-            <button
-              type="button"
-              onClick={toggleTheme}
-              aria-label={`Switch to ${isDark ? "light" : "dark"} theme`}
-              title={`Switch to ${isDark ? "light" : "dark"} theme`}
-              className="rounded-lg p-2 text-[var(--color-text-muted)] transition-colors hover:bg-[var(--color-surface)] hover:text-[var(--color-text-primary)]"
-            >
-              {isDark ? (
-                <Sun size={17} strokeWidth={1.8} />
-              ) : (
-                <Moon size={17} strokeWidth={1.8} />
-              )}
-            </button>
+            {/* Theme Picker */}
+            <ThemePicker theme={theme} setTheme={setTheme} />
 
             {/* GitHub */}
             <a
@@ -190,6 +177,14 @@ function Navbar() {
                   <Command size={16} />
                   Search pages
                 </button>
+
+                {/* Mobile Theme Picker */}
+                <div className="flex items-center justify-between px-3 py-3">
+                  <span className="text-sm text-[var(--color-text-secondary)]">
+                    Change appearance
+                  </span>
+                  <ThemePicker theme={theme} setTheme={setTheme} />
+                </div>
               </div>
             </nav>
           </div>
