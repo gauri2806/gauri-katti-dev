@@ -1,5 +1,6 @@
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-// import { Moon, Command } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const navItems = [
@@ -10,6 +11,12 @@ const navItems = [
 ];
 
 function Navbar() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--color-border)] bg-[var(--color-background)]/85 backdrop-blur-xl">
       <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-6 lg:px-8">
@@ -18,6 +25,7 @@ function Navbar() {
           to="/"
           className="group flex items-center gap-3"
           aria-label="Gauri Katti home"
+          onClick={closeMobileMenu}
         >
           <span className="flex h-8 w-8 items-center justify-center rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] font-display text-sm font-semibold text-[var(--color-accent)] transition-colors group-hover:border-[var(--color-border-hover)]">
             GK
@@ -28,7 +36,7 @@ function Navbar() {
           </span>
         </Link>
 
-        {/* Navigation */}
+        {/* Desktop Navigation */}
         <nav className="hidden items-center gap-1 md:flex">
           {navItems.map((item) => (
             <NavLink
@@ -49,14 +57,7 @@ function Navbar() {
 
         {/* Actions */}
         <div className="flex items-center gap-1">
-          {/* <button
-            type="button"
-            aria-label="Open command palette"
-            className="hidden rounded-lg p-2 text-[var(--color-text-muted)] transition-colors hover:bg-[var(--color-surface)] hover:text-[var(--color-text-primary)] sm:block"
-          >
-            <Command size={17} strokeWidth={1.8} />
-          </button> */}
-
+          {/* GitHub */}
           <a
             href="https://github.com/gauri2806"
             target="_blank"
@@ -67,6 +68,7 @@ function Navbar() {
             <FaGithub size={17} />
           </a>
 
+          {/* LinkedIn */}
           <a
             href="https://www.linkedin.com/in/gauri-katti-099370210/"
             target="_blank"
@@ -77,15 +79,44 @@ function Navbar() {
             <FaLinkedin size={17} />
           </a>
 
-          {/* <button
+          {/* Mobile Menu Button */}
+          <button
             type="button"
-            aria-label="Toggle theme"
-            className="rounded-lg p-2 text-[var(--color-text-muted)] transition-colors hover:bg-[var(--color-surface)] hover:text-[var(--color-text-primary)]"
+            onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMobileMenuOpen}
+            className="ml-1 rounded-lg p-2 text-[var(--color-text-muted)] transition-colors hover:bg-[var(--color-surface)] hover:text-[var(--color-text-primary)] md:hidden"
           >
-            <Moon size={17} strokeWidth={1.8} />
-          </button> */}
+            {isMobileMenuOpen ? <X size={19} /> : <Menu size={19} />}
+          </button>
         </div>
       </div>
+
+      {/* Mobile Navigation */}
+      {isMobileMenuOpen && (
+        <div className="border-t border-[var(--color-border)] md:hidden">
+          <nav className="mx-auto max-w-7xl px-6 py-3">
+            <div className="flex flex-col">
+              {navItems.map((item) => (
+                <NavLink
+                  key={item.to}
+                  to={item.to}
+                  onClick={closeMobileMenu}
+                  className={({ isActive }) =>
+                    `rounded-lg px-3 py-3 text-sm transition-colors ${
+                      isActive
+                        ? "bg-[var(--color-surface)] text-[var(--color-text-primary)]"
+                        : "text-[var(--color-text-secondary)] hover:bg-[var(--color-surface)] hover:text-[var(--color-text-primary)]"
+                    }`
+                  }
+                >
+                  {item.label}
+                </NavLink>
+              ))}
+            </div>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }

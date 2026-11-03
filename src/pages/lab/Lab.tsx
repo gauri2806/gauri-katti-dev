@@ -27,7 +27,8 @@ const experiments = [
             "Visualize React re-renders and understand where unnecessary renders come from.",
         category: "React",
         icon: Activity,
-        status: "Coming soon",
+        status: "Live",
+        path: "/lab/render"
     },
     {
         number: "03",

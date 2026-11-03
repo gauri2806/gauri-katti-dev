@@ -9,6 +9,7 @@ import Resume from "../pages/resume/Resume";
 import About from "../pages/about/About";
 import Lab from "../pages/lab/Lab";
 import DebouncePlayground from "../features/lab/experiments/DebouncePlayground";
+import RenderPlayground from "../features/lab/experiments/RenderPlayground";
 
 export const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ export const router = createBrowserRouter([
       {
         path: "/lab/debounce",
         element: <DebouncePlayground />,
+      },
+      {
+        path: "/lab/render",
+        element: <RenderPlayground />,
       },
     ],
   },
