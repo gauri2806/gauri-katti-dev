@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import { Moon, Command } from "lucide-react";
+// import { Moon, Command } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const navItems = [
