@@ -10,6 +10,10 @@ import About from "../pages/about/About";
 import Lab from "../pages/lab/Lab";
 import DebouncePlayground from "../features/lab/experiments/DebouncePlayground";
 import RenderPlayground from "../features/lab/experiments/RenderPlayground";
+import StatePlayground from "../features/lab/experiments/StatePlayground";
+import RequestCancellation from "../features/lab/experiments/RequestCancellation";
+import InfiniteScroll from "../features/lab/experiments/InfiniteScroll";
+import PortfolioCaseStudy from "../pages/projects/PortfolioCaseStudy";
 
 export const router = createBrowserRouter([
   {
@@ -51,6 +55,22 @@ export const router = createBrowserRouter([
         path: "/lab/render",
         element: <RenderPlayground />,
       },
+      {
+        path: "/lab/state",
+        element: <StatePlayground />
+      },
+      {
+        path: "/lab/request-cancellation",
+        element: <RequestCancellation />,
+      },
+      {
+        path: "/lab/infinite-scroll",
+        element: <InfiniteScroll />,
+      },
+      {
+        path: "/projects/portfolio",
+        element: <PortfolioCaseStudy />,
+      }
     ],
   },
 ]);

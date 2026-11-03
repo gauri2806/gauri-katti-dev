@@ -17,6 +17,29 @@
   --color-accent-blue: #6ea8fe;
 }
 
+[data-theme="light"] {
+  color-scheme: light;
+
+  --color-background: #f5f8fb;
+  --color-surface: #ffffff;
+  --color-surface-hover: #eaf0f6;
+
+  --color-border: #dce5ed;
+  --color-border-hover: #bdcbd9;
+
+  --color-text-primary: #142235;
+  --color-text-secondary: #526477;
+  --color-text-muted: #7c8da0;
+
+  --color-accent: #087f7b;
+  --color-accent-blue: #326fce;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
@@ -44,4 +67,27 @@ body {
   --font-display: "Space Grotesk", sans-serif;
   --font-sans: "Inter", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
+}
+
+/* Infinite Scroll - Feed scrollbar */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border-hover) transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--color-border-hover);
+  border-radius: 999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
 }

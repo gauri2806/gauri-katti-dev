@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 interface ProjectHeroProps {
   title: string;
@@ -28,7 +29,12 @@ function ProjectHero({
   return (
     <section className="mx-auto max-w-7xl px-6 pb-16 pt-12 lg:px-8 lg:pb-24 lg:pt-20">
       <div className="mb-10 flex items-center gap-2 font-mono text-xs text-[var(--color-text-muted)]">
-        <span>Projects</span>
+        <Link
+          to="/projects"
+          className="inline-flex items-center gap-2 font-mono text-xs text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-accent)]"
+        >
+          Projects
+        </Link>
         <span>→</span>
         <span className="text-[var(--color-text-secondary)]">{title}</span>
       </div>

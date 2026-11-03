@@ -34,10 +34,11 @@ const experiments = [
         number: "03",
         title: "State Playground",
         description:
-            "Compare different approaches to managing shared and local application state.",
+            "Explore direct updates, functional updates, and how React handles asynchronous state changes.",
         category: "State",
         icon: Layers3,
-        status: "Coming soon",
+        status: "Live",
+        path: "/lab/state",
     },
     {
         number: "04",
@@ -46,24 +47,26 @@ const experiments = [
             "Explore how AbortController prevents stale asynchronous requests from updating the UI.",
         category: "Async",
         icon: Ban,
-        status: "Coming soon",
+        status: "Live",
+        path: "/lab/request-cancellation",
     },
     {
         number: "05",
-        title: "Accessible Modal",
-        description:
-            "A modal built around keyboard navigation, focus management and accessible semantics.",
-        category: "Accessibility",
-        icon: Accessibility,
-        status: "Coming soon",
-    },
-    {
-        number: "06",
         title: "Infinite Scroll",
         description:
             "Build infinite scrolling with IntersectionObserver without constantly listening to scroll events.",
         category: "Browser APIs",
         icon: Braces,
+        status: "Live",
+        path: "/lab/infinite-scroll",
+    },
+    {
+        number: "06",
+        title: "Accessible Modal",
+        description:
+            "A modal built around keyboard navigation, focus management and accessible semantics.",
+        category: "Accessibility",
+        icon: Accessibility,
         status: "Coming soon",
     },
 ];
