@@ -49,13 +49,13 @@ function Navbar() {
 
         {/* Actions */}
         <div className="flex items-center gap-1">
-          <button
+          {/* <button
             type="button"
             aria-label="Open command palette"
             className="hidden rounded-lg p-2 text-[var(--color-text-muted)] transition-colors hover:bg-[var(--color-surface)] hover:text-[var(--color-text-primary)] sm:block"
           >
             <Command size={17} strokeWidth={1.8} />
-          </button>
+          </button> */}
 
           <a
             href="https://github.com/gauri2806"
@@ -77,13 +77,13 @@ function Navbar() {
             <FaLinkedin size={17} />
           </a>
 
-          <button
+          {/* <button
             type="button"
             aria-label="Toggle theme"
             className="rounded-lg p-2 text-[var(--color-text-muted)] transition-colors hover:bg-[var(--color-surface)] hover:text-[var(--color-text-primary)]"
           >
             <Moon size={17} strokeWidth={1.8} />
-          </button>
+          </button> */}
         </div>
       </div>
     </header>
