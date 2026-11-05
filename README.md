@@ -1,75 +1,90 @@
-# React + TypeScript + Vite
+# Gauri Katti — Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <a href="https://gauri-katti.vercel.app/">
+    <strong>🌐 View Live Portfolio</strong>
+  </a>
+</p>
 
-Currently, two official plugins are available:
+A personal portfolio built to showcase my work, technical skills, projects, and journey as a Frontend Engineer.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Designed with a focus on clean interfaces, thoughtful interactions, responsive layouts, and maintainable frontend architecture.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Overview
 
-## Expanding the ESLint configuration
+This portfolio represents how I approach frontend development — combining functionality, usability, and visual design to create meaningful web experiences.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+It brings together my professional experience, selected projects, technical skills, and experiments in frontend engineering.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Personal Introduction** — An overview of my background and frontend engineering interests.
+- **Projects Showcase** — Selected projects with detailed descriptions and technical insights.
+- **Experience & Resume** — Professional experience, education, and technical skills.
+- **About Me** — A little more about my interests beyond software development.
+- **Responsive Design** — Layouts adapted for desktop, tablet, and mobile devices.
+- **Interactive UI** — Thoughtful navigation and interface interactions.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🛠️ Tech Stack
 
+| Category | Technologies |
+|---|---|
+| Frontend | React.js, TypeScript |
+| Build Tool | Vite |
+| Styling | Tailwind CSS |
+| Icons | Lucide React, React Icons |
+| Deployment | Vercel |
+
+## 📁 Project Structure
+
+```text
+src/
+├── components/     # Reusable UI components
+├── pages/          # Application pages
+├── features/       # Feature-specific modules
+├── hooks/          # Custom React hooks
+├── lib/            # Shared utilities
+└── assets/         # Static assets
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+## 💻 Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Clone the repository:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+git clone https://github.com/gauri2806/gauri-katti-dev.git
 ```
+
+Navigate to the project directory:
+
+```bash
+cd gauri-katti-dev
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open the local URL provided by Vite to explore the portfolio.
+
+## 🌐 Connect
+
+- **Portfolio:** https://gauri-katti.vercel.app/
+- **LinkedIn:** https://www.linkedin.com/in/gauri-katti-099370210/
+- **GitHub:** https://github.com/gauri2806
+
+---
+
+<p align="center">
+  <sub>Designed and developed with curiosity, creativity, and a love for building things on the web.</sub>
+</p>
