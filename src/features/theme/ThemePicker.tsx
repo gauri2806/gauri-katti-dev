@@ -59,7 +59,7 @@ function ThemePicker({ theme, setTheme }: ThemePickerProps) {
                     <div
                         role="dialog"
                         aria-label="Choose your portfolio theme"
-                        className="absolute right-0 top-14 z-50 w-[min(330px,calc(100vw-2rem))] overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] shadow-2xl shadow-black/30 animate-in fade-in zoom-in-95 duration-150"
+                        className="fixed right-0 top-14 z-50 w-[min(330px,calc(100vw-2rem))] overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] shadow-2xl shadow-black/30 animate-in fade-in zoom-in-95 duration-150"
                     >
                         {/* Selected Theme Preview */}
                         <div className="border-b border-[var(--color-border)] p-4">
