@@ -31,9 +31,11 @@ function Resume() {
                         </h1>
 
                         <p className="mt-6 max-w-2xl text-base leading-8 text-[var(--color-text-secondary)]">
-                            Frontend Engineer focused on building responsive, maintainable,
-                            and production-ready web experiences with React, JavaScript, and
-                            TypeScript.
+                            Frontend Engineer with 2.8+ years of experience building
+                            responsive, scalable, and production-ready web applications
+                            using React, JavaScript, and TypeScript. Interested in
+                            frontend architecture, performance optimization, and
+                            building intuitive user experiences.
                         </p>
 
                         <div className="mt-8 flex flex-wrap gap-3">
@@ -78,12 +80,25 @@ function Resume() {
                                 context="Client: Siemens DISW"
                                 location="Pune, India"
                                 period="Mar 2025 — Present"
+                                highlight={{
+                                    title: "AI Orchestrator Integration",
+                                    description:
+                                        "Integrated the frontend with a backend-managed multi-agent orchestrator, enabling real-time visibility into agent execution, workflow progress, and agent-wise responses.",
+                                    technologies: [
+                                        "React.js",
+                                        "REST APIs",
+                                        "Server-Sent Events",
+                                        "Polling",
+                                        "Async JavaScript",
+                                    ],
+                                }}
                                 points={[
-                                    "Developed scalable React.js modules for Teamcenter Active Workspace using JavaScript, building responsive and production-ready frontend features.",
-                                    "Optimized frontend performance by reducing unnecessary API calls, preventing redundant React re-renders, and implementing debouncing.",
-                                    "Refactored legacy frontend code by removing redundant event publishers and optimizing batch job calls.",
-                                    "Collaborated with backend teams to integrate REST APIs, optimize data flows, and deliver end-to-end frontend features.",
-                                    "Improved Jest and React Testing Library coverage by 27%, resolved production issues, and reduced the critical defect backlog to zero.",
+                                    "Developed and maintained production-grade React.js modules for Teamcenter Active Workspace using JavaScript, React Hooks, and reusable UI components.",
+                                    "Integrated frontend APIs for a multi-agent Orchestrator workflow, enabling users to initiate execution and view agent-wise responses.",
+                                    "Implemented Server-Sent Events (SSE) to handle real-time agent execution status, progress updates, intermediate messages, and final responses.",
+                                    "Implemented polling-based asynchronous response handling using setInterval for workflows requiring repeated status checks, with loading and execution states to communicate progress.",
+                                    "Improved frontend performance by reducing unnecessary API calls, preventing redundant React re-renders, implementing debouncing, removing redundant event publishers, and optimizing batch job calls.",
+                                    "Improved Jest and React Testing Library coverage by 27%, resolved production issues through debugging and root-cause analysis, and helped reduce the critical defect backlog to zero.",
                                 ]}
                             />
 
@@ -145,6 +160,8 @@ function Resume() {
                                     "Responsive Design",
                                     "Performance Optimization",
                                     "API Integration",
+                                    "Real-time UI Updates",
+                                    "Asynchronous JavaScript",
                                     "Code Optimization",
                                 ]}
                             />
@@ -156,6 +173,10 @@ function Resume() {
                                     "Express.js",
                                     "MongoDB",
                                     "REST APIs",
+                                    "Axios",
+                                    "Server-Sent Events (SSE)",
+                                    "Polling",
+                                    "Asynchronous API Handling",
                                 ]}
                             />
 
@@ -327,6 +348,11 @@ interface ExperienceProps {
     location: string;
     period: string;
     points: string[];
+    highlight?: {
+        title: string;
+        description: string;
+        technologies: string[];
+    };
 }
 
 function Experience({
@@ -336,6 +362,7 @@ function Experience({
     location,
     period,
     points,
+    highlight,
 }: ExperienceProps) {
     return (
         <article className="grid gap-5 lg:grid-cols-[220px_minmax(0,1fr)]">
@@ -358,6 +385,40 @@ function Experience({
                     {company}
                     {context && ` · ${context}`}
                 </p>
+
+                {/* Featured Contribution */}
+                {highlight && (
+                    <div className="mt-6 rounded-2xl border border-[var(--color-accent)]/20 bg-[var(--color-surface)] p-5 sm:p-6">
+                        <div className="flex flex-wrap items-center justify-between gap-3">
+                            <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-[var(--color-accent)]">
+                                Featured Contribution
+                            </span>
+
+                            <span className="rounded-full border border-[var(--color-border)] px-3 py-1 font-mono text-[10px] text-[var(--color-text-muted)]">
+                                Frontend Engineering
+                            </span>
+                        </div>
+
+                        <h4 className="mt-4 font-display text-lg font-semibold text-[var(--color-text-primary)]">
+                            {highlight.title}
+                        </h4>
+
+                        <p className="mt-2 text-sm leading-7 text-[var(--color-text-secondary)]">
+                            {highlight.description}
+                        </p>
+
+                        <div className="mt-4 flex flex-wrap gap-2">
+                            {highlight.technologies.map((technology) => (
+                                <span
+                                    key={technology}
+                                    className="rounded-lg border border-[var(--color-border)] px-2.5 py-1.5 font-mono text-[11px] text-[var(--color-text-muted)]"
+                                >
+                                    {technology}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                )}
 
                 <ul className="mt-5 space-y-3">
                     {points.map((point) => (
@@ -424,8 +485,8 @@ function EducationItem({
             <div className="relative hidden sm:block">
                 <div
                     className={`absolute left-0 top-1.5 h-4 w-4 rounded-full border-2 ${featured
-                            ? "border-[var(--color-accent)] bg-[var(--color-background)]"
-                            : "border-[var(--color-border-hover)] bg-[var(--color-background)]"
+                        ? "border-[var(--color-accent)] bg-[var(--color-background)]"
+                        : "border-[var(--color-border-hover)] bg-[var(--color-background)]"
                         }`}
                 />
             </div>
@@ -452,8 +513,8 @@ function EducationItem({
 
                     <span
                         className={`shrink-0 rounded-lg border px-3 py-2 font-mono text-xs ${featured
-                                ? "border-[var(--color-accent)]/30 text-[var(--color-accent)]"
-                                : "border-[var(--color-border)] text-[var(--color-text-secondary)]"
+                            ? "border-[var(--color-accent)]/30 text-[var(--color-accent)]"
+                            : "border-[var(--color-border)] text-[var(--color-text-secondary)]"
                             }`}
                     >
                         {result}
@@ -465,39 +526,39 @@ function EducationItem({
 }
 
 interface AchievementCardProps {
-  number: string;
-  title: string;
-  category: string;
-  description: string;
+    number: string;
+    title: string;
+    category: string;
+    description: string;
 }
 
 function AchievementCard({
-  number,
-  title,
-  category,
-  description,
+    number,
+    title,
+    category,
+    description,
 }: AchievementCardProps) {
-  return (
-    <article className="group rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 transition-colors duration-300 hover:border-[var(--color-border-hover)]">
-      <div className="flex items-start justify-between gap-4">
-        <span className="font-mono text-xs text-[var(--color-accent)]">
-          {number}
-        </span>
+    return (
+        <article className="group rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 transition-colors duration-300 hover:border-[var(--color-border-hover)]">
+            <div className="flex items-start justify-between gap-4">
+                <span className="font-mono text-xs text-[var(--color-accent)]">
+                    {number}
+                </span>
 
-        <span className="rounded-full border border-[var(--color-border)] px-3 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--color-text-muted)]">
-          {category}
-        </span>
-      </div>
+                <span className="rounded-full border border-[var(--color-border)] px-3 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--color-text-muted)]">
+                    {category}
+                </span>
+            </div>
 
-      <h3 className="mt-8 font-display text-xl font-semibold text-[var(--color-text-primary)]">
-        {title}
-      </h3>
+            <h3 className="mt-8 font-display text-xl font-semibold text-[var(--color-text-primary)]">
+                {title}
+            </h3>
 
-      <p className="mt-3 text-sm leading-7 text-[var(--color-text-secondary)]">
-        {description}
-      </p>
-    </article>
-  );
+            <p className="mt-3 text-sm leading-7 text-[var(--color-text-secondary)]">
+                {description}
+            </p>
+        </article>
+    );
 }
 
 export default Resume;
