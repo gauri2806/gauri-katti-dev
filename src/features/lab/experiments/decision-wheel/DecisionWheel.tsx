@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Dices, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import Wheel from "./Wheel";
 import WheelOptions from "./WheelOptions";
 import type { WheelOption } from "./types";

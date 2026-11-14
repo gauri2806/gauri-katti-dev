@@ -4,34 +4,34 @@ import {
     Activity,
     Accessibility,
     AudioLines,
-    AudioWaveform,
+    // AudioWaveform,
     Blend,
     Ban,
     Braces,
     Gauge,
     Keyboard,
     Layers3,
-    Palette,
+    // Palette,
     Type,
-    Orbit,
-    Zap,
-    Brain,
+    // Orbit,
+    // Zap,
+    // Brain,
     Paintbrush,
-    FileImage,
-    Shapes,
-    Grid3X3,
-    Images,
-    Languages,
-    Timer,
-    Ruler,
+    // FileImage,
+    // Shapes,
+    // Grid3X3,
+    // Images,
+    // Languages,
+    // Timer,
+    // Ruler,
     Dices,
     Shuffle,
     Blocks,
     Workflow,
     Network,
     Move,
-    Quote,
-    Stars,
+    // Quote,
+    // Stars,
     Cookie,
     Lightbulb
 } from "lucide-react";
@@ -46,7 +46,6 @@ export type Category =
     | "Discover";
 
 export interface LabItem {
-    number: string;
     title: string;
     description: string;
     category: Exclude<Category, "All">;
@@ -113,7 +112,6 @@ export const categoryContent: Record<
 
 export const labItems: LabItem[] = [
     {
-        number: "01",
         title: "Typing Speed Test",
         description:
             "How fast can your thoughts travel through your fingers? Test your typing speed, accuracy and consistency.",
@@ -122,7 +120,6 @@ export const labItems: LabItem[] = [
         status: "Coming soon",
     },
     {
-        number: "02",
         title: "Keyboard Sound Studio",
         description:
             "Give every keystroke a sound of its own. Explore different keyboard sounds and create your perfect typing atmosphere.",
@@ -131,7 +128,6 @@ export const labItems: LabItem[] = [
         status: "Coming soon",
     },
     // {
-    //     number: "03",
     //     title: "Particle Playground",
     //     description:
     //         "Move your cursor, create ripples and interact with a world of particles. Just play around and see what happens.",
@@ -140,7 +136,6 @@ export const labItems: LabItem[] = [
     //     status: "Coming soon",
     // },
     // {
-    //     number: "04",
     //     title: "Color Personality",
     //     description:
     //         "Answer a few fun questions and discover a color palette that reflects your personality and creative preferences.",
@@ -149,7 +144,6 @@ export const labItems: LabItem[] = [
     //     status: "Coming soon",
     // },
     // {
-    //     number: "05",
     //     title: "Reaction Time Test",
     //     description:
     //         "Think you're quick? Test your reflexes and see how fast you can react when the moment arrives.",
@@ -158,7 +152,6 @@ export const labItems: LabItem[] = [
     //     status: "Coming soon",
     // },
     // {
-    //     number: "06",
     //     title: "Memory Match",
     //     description:
     //         "Flip the cards, find matching pairs and challenge yourself to complete the board in as few moves as possible.",
@@ -167,7 +160,6 @@ export const labItems: LabItem[] = [
     //     status: "Coming soon",
     // },
     {
-        number: "07",
         title: "Canvas Board",
         description:
             "A little digital canvas to sketch, doodle and experiment with colors. Create something of your own and save it.",
@@ -176,7 +168,6 @@ export const labItems: LabItem[] = [
         status: "Coming soon",
     },
     {
-        number: "08",
         title: "Gradient Studio",
         description:
             "Play with colors, experiment with gradients and create beautiful backgrounds. Copy the CSS or save your creations.",
@@ -185,7 +176,6 @@ export const labItems: LabItem[] = [
         status: "Coming soon",
     },
     // {
-    //     number: "09",
     //     title: "Poster Maker",
     //     description:
     //         "Turn words into visuals. Design aesthetic posters using typography, colors, backgrounds and creative layouts.",
@@ -194,7 +184,6 @@ export const labItems: LabItem[] = [
     //     status: "Coming soon",
     // },
     // {
-    //     number: "10",
     //     title: "Generative Art",
     //     description:
     //         "Explore the intersection of code and creativity. Generate unique patterns, shapes and abstract artwork.",
@@ -203,7 +192,6 @@ export const labItems: LabItem[] = [
     //     status: "Coming soon",
     // },
     // {
-    //     number: "11",
     //     title: "Pixel Art Studio",
     //     description:
     //         "Create tiny pixel illustrations one square at a time. Experiment with colors and bring your pixel creations to life.",
@@ -212,7 +200,6 @@ export const labItems: LabItem[] = [
     //     status: "Coming soon",
     // },
     // {
-    //     number: "12",
     //     title: "Moodboard Maker",
     //     description:
     //         "Collect colors, images, notes and inspiration in one place. Put together a visual moodboard for your next idea.",
@@ -221,7 +208,6 @@ export const labItems: LabItem[] = [
     //     status: "Coming soon",
     // },
     // {
-    //     number: "13",
     //     title: "Translator",
     //     description:
     //         "Translate text between different languages with a simple interface. Make communication across languages a little easier.",
@@ -230,7 +216,6 @@ export const labItems: LabItem[] = [
     //     status: "Coming soon",
     // },
     // {
-    //     number: "14",
     //     title: "Focus Timer",
     //     description:
     //         "Make room for focused work with customizable Pomodoro sessions, short breaks and a little help staying on track.",
@@ -239,7 +224,6 @@ export const labItems: LabItem[] = [
     //     status: "Coming soon",
     // },
     // {
-    //     number: "15",
     //     title: "Unit Converter",
     //     description:
     //         "Convert measurements without the mental math. Switch between units of length, weight, temperature and more.",
@@ -248,7 +232,6 @@ export const labItems: LabItem[] = [
     //     status: "Coming soon",
     // },
     {
-        number: "16",
         title: "Decision Wheel",
         description:
             "Can't decide? Add your options, spin the wheel and let a little randomness make the choice for you.",
@@ -258,7 +241,6 @@ export const labItems: LabItem[] = [
         path: "/lab/decision-wheel"
     },
     {
-        number: "17",
         title: "Text Toolkit",
         description:
             "Count words, transform text cases, remove extra spaces and use handy formatting utilities in one place.",
@@ -267,7 +249,6 @@ export const labItems: LabItem[] = [
         status: "Coming soon",
     },
     {
-        number: "18",
         title: "Random Generator",
         description:
             "Need a little inspiration? Generate random ideas, writing prompts, names, challenges and unexpected suggestions.",
@@ -276,7 +257,6 @@ export const labItems: LabItem[] = [
         status: "Coming soon",
     },
     {
-        number: "19",
         title: "Debounce Playground",
         description:
             "See how debouncing changes the number of requests triggered by a search input.",
@@ -286,7 +266,6 @@ export const labItems: LabItem[] = [
         path: "/lab/debounce",
     },
     {
-        number: "20",
         title: "Render Playground",
         description:
             "Visualize React re-renders and understand where unnecessary renders come from.",
@@ -296,7 +275,6 @@ export const labItems: LabItem[] = [
         path: "/lab/render",
     },
     {
-        number: "21",
         title: "State Playground",
         description:
             "Explore direct updates, functional updates, and how React handles asynchronous state changes.",
@@ -306,7 +284,6 @@ export const labItems: LabItem[] = [
         path: "/lab/state",
     },
     {
-        number: "22",
         title: "Request Cancellation",
         description:
             "Explore how AbortController prevents stale asynchronous requests from updating the UI.",
@@ -316,7 +293,6 @@ export const labItems: LabItem[] = [
         path: "/lab/request-cancellation",
     },
     {
-        number: "23",
         title: "Infinite Scroll",
         description:
             "Build infinite scrolling with IntersectionObserver without constantly listening to scroll events.",
@@ -326,7 +302,6 @@ export const labItems: LabItem[] = [
         path: "/lab/infinite-scroll",
     },
     {
-        number: "24",
         title: "Accessible Modal",
         description:
             "A modal built around keyboard navigation, focus management and accessible semantics.",
@@ -335,7 +310,6 @@ export const labItems: LabItem[] = [
         status: "Coming soon",
     },
     {
-        number: "25",
         title: "Component Playground",
         description:
             "Explore interactive UI components, experiment with their props and states, and see how small changes affect their behavior.",
@@ -344,7 +318,6 @@ export const labItems: LabItem[] = [
         status: "Coming soon",
     },
     {
-        number: "26",
         title: "JavaScript Visualizer",
         description:
             "Make JavaScript concepts easier to understand by exploring execution contexts, closures, the event loop and more.",
@@ -353,7 +326,6 @@ export const labItems: LabItem[] = [
         status: "Coming soon",
     },
     {
-        number: "27",
         title: "API Playground",
         description:
             "Experiment with API requests, inspect responses and explore loading, error and success states.",
@@ -362,7 +334,6 @@ export const labItems: LabItem[] = [
         status: "Coming soon",
     },
     {
-        number: "28",
         title: "Motion Playground",
         description:
             "Experiment with transitions, animations and motion effects. Tweak properties and see your interactions come alive.",
@@ -371,7 +342,6 @@ export const labItems: LabItem[] = [
         status: "Coming soon",
     },
     // {
-    //     number: "29",
     //     title: "Ambient World",
     //     description:
     //         "Create your own atmosphere by mixing sounds of rain, wind, nature and everyday surroundings. Find your focus or unwind.",
@@ -380,7 +350,6 @@ export const labItems: LabItem[] = [
     //     status: "Coming soon",
     // },
     // {
-    //     number: "30",
     //     title: "A Thought for Today",
     //     description:
     //         "A little space for daily inspiration. Discover thoughtful quotes, reflections and words worth carrying through the day.",
@@ -389,7 +358,6 @@ export const labItems: LabItem[] = [
     //     status: "Coming soon",
     // },
     // {
-    //     number: "31",
     //     title: "Digital Universe",
     //     description:
     //         "Step into an interactive world of stars, particles and constellations. Explore a little universe right inside your browser.",
@@ -398,7 +366,6 @@ export const labItems: LabItem[] = [
     //     status: "Coming soon",
     // },
     {
-        number: "32",
         title: "Fortune Cookie",
         description:
             "Crack open a virtual fortune cookie and reveal a random little message, prediction or piece of unexpected wisdom.",
@@ -407,7 +374,6 @@ export const labItems: LabItem[] = [
         status: "Coming soon",
     },
     {
-        number: "33",
         title: "Curiosity Generator",
         description:
             "Discover something unexpected with random facts, interesting questions and little ideas that make you stop and think.",

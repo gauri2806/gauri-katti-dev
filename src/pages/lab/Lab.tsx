@@ -1,23 +1,7 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
-import {
-    Activity,
-    Accessibility,
-    AudioLines,
-    AudioWaveform,
-    Blend,
-    Ban,
-    Braces,
-    Gauge,
-    Keyboard,
-    Layers3,
-    Palette,
-    Type,
-} from "lucide-react";
 
 import LabCard from "../../features/lab/LabCard";
-import type { LucideIcon } from "lucide-react";
 
 import {
     categories,
@@ -130,7 +114,7 @@ function Lab() {
                     >
                         {filteredItems.map((item, index) => (
                             <LabCard
-                                key={item.number}
+                                key={item.title}
                                 {...item}
                                 index={index}
                             />

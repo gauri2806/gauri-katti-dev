@@ -4,7 +4,6 @@ import type { LucideIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface LabCardProps {
-    number: string;
     title: string;
     description: string;
     category: string;
@@ -15,7 +14,6 @@ interface LabCardProps {
 }
 
 function LabCard({
-    number,
     title,
     description,
     category,
