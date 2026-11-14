@@ -14,6 +14,7 @@ import StatePlayground from "../features/lab/experiments/StatePlayground";
 import RequestCancellation from "../features/lab/experiments/RequestCancellation";
 import InfiniteScroll from "../features/lab/experiments/InfiniteScroll";
 import PortfolioCaseStudy from "../pages/projects/PortfolioCaseStudy";
+import DecisionWheel from "../features/lab/experiments/decision-wheel/DecisionWheel";
 
 export const router = createBrowserRouter([
   {
@@ -70,6 +71,10 @@ export const router = createBrowserRouter([
       {
         path: "/projects/portfolio",
         element: <PortfolioCaseStudy />,
+      },
+      {
+        path: "/lab/decision-wheel",
+        element: <DecisionWheel />
       }
     ],
   },

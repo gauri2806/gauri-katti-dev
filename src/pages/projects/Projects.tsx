@@ -8,7 +8,7 @@ function Projects() {
       <Container className="py-20 sm:py-28">
         {/* Header */}
         <div className="max-w-3xl">
-          <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--color-accent)]">
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--color-accent)]">
             Projects
           </p>
 

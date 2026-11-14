@@ -41,9 +41,7 @@ function LabCard({
                 }`}
         >
             <div className="flex items-start justify-between">
-                <span className="font-mono text-xs text-[var(--color-text-muted)]">
-                    {number}
-                </span>
+                <span className="font-mono text-xs text-[var(--color-text-muted)]"></span>
 
                 <span
                     className={`rounded-full border px-3 py-1 font-mono text-[10px] uppercase tracking-[0.12em] ${isLive
@@ -55,7 +53,7 @@ function LabCard({
                 </span>
             </div>
 
-            <div className="mt-10 flex h-10 w-10 items-center justify-center rounded-xl border border-[var(--color-border)] text-[var(--color-accent)]">
+            <div className="mt-5 flex h-10 w-10 items-center justify-center rounded-xl border border-[var(--color-border)] text-[var(--color-accent)]">
                 <Icon size={18} />
             </div>
 
@@ -79,7 +77,7 @@ function LabCard({
                     to={path}
                     className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--color-text-primary)] transition-colors group-hover:text-[var(--color-accent)]"
                 >
-                    Open experiment
+                    Try it now
                     <ArrowUpRight
                         size={16}
                         className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
