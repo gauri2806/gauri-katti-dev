@@ -31,7 +31,7 @@ function Resume() {
                         </h1>
 
                         <p className="mt-6 max-w-2xl text-base leading-8 text-[var(--color-text-secondary)]">
-                            Frontend Engineer with 2.8+ years of experience building
+                            Frontend Engineer with 3 years of experience building
                             responsive, scalable, and production-ready web applications
                             using React, JavaScript, and TypeScript. Interested in
                             frontend architecture, performance optimization, and
